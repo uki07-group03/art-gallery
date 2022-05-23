@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body { 
+    background-color: #07031a;
+    color: rgb(220, 158, 76);
+    margin: 0;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+  }
+  
+  .container {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  input,
+  button {
+    border: 1px solid #dedede;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 16px;
+    padding: 8px 10px;
+    margin: 0;
+  }
+  
+  input[type='text'] {
+    width: 300px;
+  }
+  
+  /* .search-btn {
+    cursor: pointer;
+    border-left: 0;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  } */
+  
+  .random-btn {
+    cursor: pointer;
+    margin-left: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .container .image-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    padding-top: 30px;
+  }
+  .container .image-container .image{
+    padding:15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border:2px solid #000;
+    width: 350px;
+    border-radius: 5px;
+    animation: fadeIn .2s linear;
+  }
+  @keyframes fadeIn {
+    0%{
+      transform: scale(.5) translateY(-10px);
+      opacity: 0;
+    }
+  }
+  .container .image-container .image img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .container .image-container .image h3{
+    font-size: 20px;
+  }
+  
+  @media (max-width: 800px) {
+    .cars {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 700px) {
+    .cars {
+      grid-template-columns: repeat(2, 1fr);
+    } 
+  
+    .car {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  @media (max-width: 500px) {
+    input[type='text'] {
+      width: 100%;
+    }
+  
+    .cars {
+      grid-template-columns: 1fr;
+    }
+  
+    .car {
+      height: 300px;
+      width: 300px;
+    }
+  }
+  
